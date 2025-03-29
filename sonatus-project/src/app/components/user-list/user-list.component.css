@@ -1,0 +1,132 @@
+
+h4{
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    margin: 20px 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+  }
+  
+  th {
+    background-color: #f89c45;
+    color:#fff;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 12px;
+    color: #333;
+  }
+
+  .logo{
+    width:180px;
+    height: 80px;
+  }
+
+  .popup-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 300px; 
+  }
+
+  div{
+    font-size: 12px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+
+  .column-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .no-results {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    padding: 20px;
+  }
+
+.popup-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+  }
+  
+ 
+  app-user-detail {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    max-height: 90%; 
+    overflow-y: auto; 
+  }
+
+  .searchbox{
+    padding: 10px 15px;
+    height: 20px;
+    width: 20%;
+  }
+  
+  
+  @media (max-width: 600px) {
+    app-user-detail {
+      width: 70%; 
+      padding: 15px;
+    }
+  }
+  
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    app-user-detail {
+      width: 70%; 
+      padding: 20px;
+    }
+  }
+  
+  
+  @media (min-width: 1025px) {
+    app-user-detail {
+      width: 50%; 
+      padding: 20px;
+    }
+  }
+  
+  
+  
+
+  

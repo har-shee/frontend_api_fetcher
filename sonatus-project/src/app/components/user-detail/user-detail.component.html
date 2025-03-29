@@ -1,0 +1,30 @@
+<div *ngIf="selectedUser; else noUserTemplate">
+    <div class="popup" (click)="$event.stopPropagation()">
+      <h3>User Details</h3>
+      <p>ID: {{ selectedUser.id }}</p>
+      <p>Name: {{ selectedUser.name }}</p>
+      <p>Email: {{ selectedUser.email }}</p>
+      <p>Phone: {{selectedUser.phone}}</p>
+      <div style="display: flex; justify-content: space-between">
+        <div style="width: 48%;">
+          <h4>Address</h4>
+          <p>Suite: {{selectedUser.address.suite}}</p>
+          <p>Street: {{selectedUser.address.street}}</p>
+          <p>City: {{selectedUser.address.city}}</p>
+          <p>ZipCode: {{selectedUser.address.zipcode}}</p>
+          <p>Latitude: {{selectedUser.address.geo.lat}}</p>
+          <p>Logitute: {{selectedUser.address.geo.lng}}</p>
+        </div>
+        <div style="width: 48%;">
+          <h4>Company</h4>
+          <p>Name: {{selectedUser.company.name}}</p>
+          <p>Catch Phrase: {{selectedUser.company.catchPhrase}}</p>
+          <p>Business: {{selectedUser.company.bs}}</p>
+        </div>
+      </div>
+      <button (click)="closeDetails()">Close</button>
+    </div>
+  </div>
+  <ng-template #noUserTemplate>
+    <p>No user selected. Please select a user from the list.</p>
+  </ng-template>

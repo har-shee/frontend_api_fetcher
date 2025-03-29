@@ -1,0 +1,91 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+sonatus-project/dist
+sonatus-project/tmp
+sonatus-project/out-tsc
+sonatus-project/bazel-out
+
+# Node
+sonatus-project/node_modules
+sonatus-project/npm-debug.log
+sonatus-project/yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+sonatus-project/.angular/cache
+sonatus-project/.sass-cache/
+sonatus-project/connect.lock
+sonatus-project/coverage
+sonatus-project/libpeerconnection.log
+sonatus-project/testem.log
+sonatus-project/typings
+
+# System files
+sonatus-project/.DS_Store
+sonatus-project/Thumbs.db
+
+
+
+
+
+
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+sonatus-project/node_modules
+sonatus-project/npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+

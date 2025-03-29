@@ -1,0 +1,65 @@
+<header>
+    <img src="https://www.sonatus.com/wp-content/uploads/2023/05/Sonatus-BlogCard-1178x470.jpg" alt="Logo" class="logo">
+  </header>
+  <input class="searchbox" type="text" [(ngModel)]="searchQuery" placeholder="Search users..." />
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let column of tableColumns" (click)="sortUsers(column)">
+          <span class="column-header">
+            {{ column.toUpperCase() }}
+            <span class="sort-icon">
+  
+              <i *ngIf="sortField === column && sortDirection" class="fa fa-arrow-up"></i>
+  
+              <i *ngIf="sortField === column && !sortDirection" class="fa fa-arrow-down"></i>
+  
+              <i *ngIf="sortField !== column" class="fa fa-arrow-up"></i>
+            </span>
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let user of users | search: searchQuery">
+        <tr (click)="onUserClick(user)">
+          <td><span>{{ user.id }}</span></td>
+          <td><span>{{ user.name }}</span></td>
+          <td> <span>{{ user.email }}</span>
+          </td>
+        </tr>
+      </ng-container>
+  
+      <ng-template [ngIf]="(users | search: searchQuery).length === 0 && !isLoading">
+        <tr>
+          <td colspan="3">
+            <div class="no-results">
+              <p>No results found</p>
+            </div>
+    
+          </td>
+        </tr>
+         
+      </ng-template>
+
+      <ng-template [ngIf]="isLoading">
+        <tr>
+          <td colspan="3">
+            <div class="no-results">
+              <p>Loading...</p>
+            </div>
+    
+          </td>
+        </tr>
+         
+      </ng-template>
+      
+    </tbody>
+  </table>
+  <div *ngIf="isUserSelected" class="popup-outer" (click)="onClickClose()" >
+    <app-user-detail [selectedUser]="selectedUser" (close)="onClickClose()">
+    </app-user-detail>
+  </div>
+  
+  
+  
